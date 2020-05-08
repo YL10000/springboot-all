@@ -1,6 +1,7 @@
 package com.life.controller;
 
-import com.life.modal.User;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.life.modal.UserEntity;
 import com.life.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -22,8 +23,15 @@ public class UserController {
 
     @ApiOperation(value = "添加用户")
     @PostMapping("add")
-    public Integer addUser(@RequestBody @Valid User user){
-        return userService.addUser(user);
+    public Boolean addUser(@RequestBody @Valid UserEntity userEntity){
+        return userService.save(userEntity);
+    }
+
+    @ApiOperation("分页查询用户数据")
+    @PostMapping("page")
+    public Page<UserEntity> pageuser(int pageNum, int pageSize){
+        Page<UserEntity> page = new Page<>(pageNum,pageSize);
+        return userService.page(page);
     }
 
 }

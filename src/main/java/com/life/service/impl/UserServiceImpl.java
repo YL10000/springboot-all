@@ -1,16 +1,14 @@
 package com.life.service.impl;
 
-import com.life.modal.User;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.life.mapper.UserMapper;
+import com.life.modal.UserEntity;
 import com.life.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
-public class UserServiceImpl implements UserService {
-    @Override
-    public Integer addUser(User user) {
-        log.info("创建成功");
-        return 1;
-    }
+public class UserServiceImpl extends ServiceImpl<UserMapper,UserEntity> implements UserService {
+
 }

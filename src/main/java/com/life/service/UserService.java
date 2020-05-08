@@ -1,8 +1,8 @@
 package com.life.service;
 
-import com.life.modal.User;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.life.modal.UserEntity;
 
-public interface UserService {
+public interface UserService extends IService<UserEntity> {
 
-    public Integer addUser(User user);
 }
