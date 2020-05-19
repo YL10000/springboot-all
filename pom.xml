@@ -56,6 +56,19 @@
             <artifactId>hutool-all</artifactId>
             <version>5.1.0</version>
         </dependency>
+
+        <!-- 引入dataway -->
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-spring</artifactId>
+            <version>4.1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-dataway</artifactId>
+            <version>4.1.7</version>
+        </dependency>
+
     </dependencies>
 
     <build>
