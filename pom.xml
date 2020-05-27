@@ -62,6 +62,18 @@
             <artifactId>easyexcel</artifactId>
             <version>2.2.3</version>
         </dependency>
+        <!-- 引入dataway -->
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-spring</artifactId>
+            <version>4.1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>net.hasor</groupId>
+            <artifactId>hasor-dataway</artifactId>
+            <version>4.1.7</version>
+        </dependency>
+
     </dependencies>
 
     <build>
