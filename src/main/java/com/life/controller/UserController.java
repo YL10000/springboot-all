@@ -1,17 +1,14 @@
 package com.life.controller;
 
-import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import com.alibaba.excel.EasyExcel;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.life.constant.SpringElValidator;
 import com.life.modal.UserEntity;
 import com.life.service.UserService;
 import com.sun.javaws.exceptions.InvalidArgumentException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.Assert;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -32,8 +29,8 @@ public class UserController {
     @ApiOperation(value = "添加用户")
     @PostMapping("add")
     public Boolean addUser(@RequestBody @Validated UserEntity userEntity) throws InvalidArgumentException {
-        String message = SpringElValidator.messageThreadLocal.get();
-        Assert.isTrue(StrUtil.isEmpty(message),message);
+        //String message = SpringElValidator.messageThreadLocal.get();
+        //Assert.isTrue(StrUtil.isEmpty(message),message);
         return userService.save(userEntity);
     }
 
